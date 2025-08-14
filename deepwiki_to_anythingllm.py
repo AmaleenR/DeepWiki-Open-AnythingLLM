@@ -8,11 +8,11 @@ load_dotenv()
 BASE_URL = os.getenv("ANYTHINGLLM_API_URL")
 ANYTHINGLLM_API_UPLOAD = f"{BASE_URL}/document/upload"  # API endpoint
 ANYTHINGLLM_API_LIST = f"{BASE_URL}/documents"
-WORKSPACE_SLUG = "deepwiki-anythingllm-uob" 
+WORKSPACE_SLUG = os.getenv("WORKSPACE_SLUG") #Your anythingLLM workspace slug
 ANYTHINGLLM_API_UPDATE_EMBEDS = f"{BASE_URL}/workspace/{WORKSPACE_SLUG}/update-embeddings"
 
 API_KEY = os.getenv("ANYTHINGLLM_API_KEY")  # From AnythingLLM settings
-LOCAL_FOLDER = r"C:\Users\aahmadridzuanullah\.adalflow\wikicache"  # Folder containing .md or .json files
+LOCAL_FOLDER = os.getenv("LOCAL_FOLDER") # Folder containing .md or .json files
  
 headers = {
     "Authorization": f"Bearer {API_KEY}"
