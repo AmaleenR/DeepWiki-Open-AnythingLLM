@@ -1,7 +1,7 @@
 # My AnythingLLM Project
 
 This project connects to an [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm) instance using its REST API.  
-It allows you to send requests to your local or hosted AnythingLLM environment.
+It allows you to send requests to your local or hosted AnythingLLM environmentand process the resulting DeepWiki output.
 
 ## Prerequisites
 - Python 3.10+
@@ -13,8 +13,9 @@ It allows you to send requests to your local or hosted AnythingLLM environment.
 1. Clone this repository:
    ```bash
    git clone <your_repo_url>
-   cd <repo_name>
-2. Create and activate a virtual environment
+2. Open project folder
+   
+3. Create and activate a virtual environment
    ```bash
    python -m venv venv
    ```
@@ -26,18 +27,18 @@ It allows you to send requests to your local or hosted AnythingLLM environment.
     source venv/bin/activate  #On macOS/Linux
     ```
   
-3. Install dependencies
+4. Install dependencies
    ```bash
    pip install requests python-dotenv
 
-4. Create a `.env` file in the root directory and add the following:
+5. Create a `.env` file in the root directory and add the following:
    ```env
    ANYTHINGLLM_API_KEY=your_anythingllm_api_key_here
    ANYTHINGLLM_API_URL=http://localhost:{port}/api/v1
    WORKSPACE_SLUG="your-workspace-slug"
    LOCAL_FOLDER=C:\Users\<username>\.adalflow\wikicache
 
-5. Running the App
+6. Running the App
      Activate the virtual environment, then:
       ```bash
       python deepwiki_to_anythingllm.py
