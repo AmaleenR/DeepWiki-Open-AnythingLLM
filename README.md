@@ -34,18 +34,10 @@ It allows you to send requests to your local or hosted AnythingLLM environment.
    ```env
    ANYTHINGLLM_API_KEY=your_anythingllm_api_key_here
    ANYTHINGLLM_API_URL=http://localhost:{port}/api/v1
+   WORKSPACE_SLUG="your-workspace-slug"
+   LOCAL_FOLDER=C:\Users\<username>\.adalflow\wikicache
 
-5. Update the local folder path in deepwiki_to_anythingllm.py
-   Find the variable for the Deepwiki output folder and update it:
-   ```bash
-   LOCAL_FOLDER = r"C:\Users\<username>\.adalflow\wikicache" 
-   ```
-7. Update the workspace slug in deepwiki_to_anythingllm.py
-   ```bash
-   WORKSPACE_SLUG = "your-workspace-slug"
-   ```
-
-8. Running the App
+5. Running the App
      Activate the virtual environment, then:
       ```bash
       python deepwiki_to_anythingllm.py
